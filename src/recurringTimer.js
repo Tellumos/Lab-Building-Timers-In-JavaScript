@@ -23,11 +23,17 @@
  * stopRecurringTimer(timerId); // Stops the recurring timer started with the given ID.
  */
 function recurringTimer(message, interval) {
+  let timer = setInterval(() => {
+    console.log(message)
+  }, interval)
+  return timer
   // Set up a timer using setInterval to log the message
   // Return the timer ID
 }
 
-function stopRecurringTimer(timerId) {
+function stopRecurringTimer(timer) {
+  clearInterval(timer)
+ 
   // Stop the timer using clearInterval
 }
 
